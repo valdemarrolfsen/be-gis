@@ -1,0 +1,17 @@
+.DS_store
+staticroot/
+media/
+venv/
+
+
+db.sqlite3
+celerybeat-schedule.db
+dump.rdb
+
+# Pycharm and IDEA
+/.idea
+# Python
+*.pyc
+
+settings_local.py
+mojob/etc/
