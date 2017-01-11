@@ -162,7 +162,7 @@ CHANNEL_LAYERS = {
 # CORS
 CORS_ORIGIN_WHITELIST = (
         'localhost:3000',
-        'http://begis-web.s3-website-eu-west-1.amazonaws.com'
+        'begis-web.s3-website-eu-west-1.amazonaws.com'
     )
 
 CORS_ALLOW_CREDENTIALS = True
