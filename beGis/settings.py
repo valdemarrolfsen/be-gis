@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'storages',
     'corsheaders',
     'tutorials',
     'files'
@@ -139,10 +140,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'beGis.custom_storages.StaticStorage'
+STATIC_URL = 'https://begis-static.s3.amazonaws.com/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+
+MEDIA_URL = 'https://begis-media.s3.amazonaws.com/'
+DEFAULT_FILE_STORAGE = 'beGis.custom_storages.MediaStorage'
 
 # Channels
 CHANNEL_LAYERS = {
