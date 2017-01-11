@@ -138,7 +138,15 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'Cache-Control': 'max-age=94608000',
+}
+
+AWS_ACCESS_KEY_ID = 'AKIAJSFIM76M25DPUK6A'
+AWS_SECRET_ACCESS_KEY = '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'
 
 STATICFILES_STORAGE = 'beGis.custom_storages.StaticStorage'
 STATIC_URL = 'https://begis-static.s3.amazonaws.com/'
